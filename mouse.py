@@ -1,7 +1,6 @@
 #!/usr/bin/env python 
 import pygame
 import rospy
-
 from geometry_msgs.msg import Vector3
 class MainWindow(object):
 
@@ -21,7 +20,6 @@ class MainWindow(object):
             while True:
                 for event in pygame.event.get():
                     if event.type == pygame.MOUSEBUTTONDOWN or event.type == pygame.MOUSEBUTTONUP:
-                        #print pygame.mouse.get_pos()
                         a = pygame.mouse.get_pressed()
                 print a
                 vec.x=a[0]
@@ -33,5 +31,4 @@ class MainWindow(object):
 
         except rospy.ROSInterruptException:
             pass
-
 MainWindow()
