@@ -17,7 +17,7 @@ class MainWindow(object):
             screen = pygame.display.set_mode((640,480), 0, 32)
             pygame.mixer.init()
             a=0 ,0 ,0
-            while True:
+            while not rospy.is_shutdown():
                 for event in pygame.event.get():
                     if event.type == pygame.MOUSEBUTTONDOWN or event.type == pygame.MOUSEBUTTONUP:
                         a = pygame.mouse.get_pressed()
